@@ -66,3 +66,7 @@ Tests for the grading engine: `node --test test/grading.test.js`.
   set `xpinstall.signatures.required` to `false` and install the unsigned `.xpi` directly.
 
 Requires Firefox 140+.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
