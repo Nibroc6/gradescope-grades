@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Nibroc's Gradescope Grades",
+  "version": "1.1.1",
+  "description": "Shows your weighted course grade on Gradescope, with syllabus weightings set up by any AI assistant.",
+  "icons": { "48": "icons/icon.svg", "96": "icons/icon.svg" },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.gradescope.com/courses/*"],
+      "js": ["grading.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "gradescope-grades@nibroc",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": { "required": ["none"] }
+    }
+  }
+}
